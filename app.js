@@ -73,6 +73,10 @@ app.use('/mail', [
     require('./routes/mail/acceptJob')
 ])
 
+app.use('/', [
+    require('./routes/home')
+])
+
 // Error handling
 app.use((error, req, res, next) => {
     const status = error.statusCode || 500
